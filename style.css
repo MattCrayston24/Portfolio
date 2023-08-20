@@ -1,0 +1,505 @@
+/* Réinitialisation des styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #232323;
+    color: #fff;
+  }
+  
+ header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol */
+header:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Positionnement des liens */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centre verticalement les liens */
+  height: 60px; /* Ajuste la hauteur de la barre de navigation */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Ajout du rond et du soulignement */
+nav a::before,
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00ffbb; /* Couleur du rond */
+  border-radius: 50%; /* Forme du rond */
+  bottom: -3px; /* Ajustement vertical */
+  transform: scaleX(0); /* Initiallement caché */
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+nav a::before {
+  left: -15px; /* Ajustement horizontal pour le rond avant le texte */
+}
+
+nav a::after {
+  right: -15px; /* Ajustement horizontal pour le rond après le texte */
+}
+
+nav a:hover {
+  color: #00ffbb;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+  transform: scaleX(1); /* Affiche le rond au survol */
+}
+
+  
+  
+  .accueil {
+    position: relative; /* Ajout de la position relative pour les éléments enfants */
+    background-image: url('chemin/vers/votre/image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  
+  
+  @keyframes bougerTexte {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .presentation {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    animation: bougerTexte 6s infinite alternate;
+  }
+  
+  .presentation h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #00ffbb;
+  }
+  .presentation h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .presentation p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .presentation .texte {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .presentation img {
+    max-width: 45%;
+    border: 4px solid #00ffbb; /* Ajout de la bordure autour de l'image */
+  }
+  
+  
+  .intro {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .intro .nom {
+    font-weight: bold;
+  }
+  
+  .intro .metier,
+  .intro .passion {
+    color: #00ffbb;
+    font-style: italic;
+  }
+  
+  .bouton-portfolio {
+    display: inline-block;
+    background-color: #00ffbb;
+    color: #242424;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bouton-portfolio:hover {
+    background-color: #00ac7e;
+  }
+
+  .ap {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    justify-content: center;
+    align-items: center;
+    background-color: #00ac7e;
+    text-align: center; /* Centre le contenu horizontal */
+    height: 900px;
+  }
+  
+  .txt {
+    width: 70%;
+    color: #232323;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 20px; /* Ajout de marge en bas pour séparer le texte du bouton */
+    animation: bougerTexte 6s infinite alternate;
+  }
+  
+.boutons-conteneur {
+    display: flex;
+    flex-direction: column; /* Affiche les boutons en colonne */
+    align-items: center; /* Centre horizontalement les boutons */
+    margin-top: 20px;
+}
+
+#voirPlus,
+#voirMoins {
+    background-color: #242424;
+    color: #00ac7e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    margin-top: 10px; /* Ajout de marge entre les boutons */
+}
+
+#voirPlus:hover,
+#voirMoins:hover {
+    background-color: #00ac7e;
+    color: #242424;
+}
+
+/* Animation pour déplacer les carrés lentement et aléatoirement */
+@keyframes bougerCarre {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(-10px, -10px);
+    }
+    75% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.competences {
+    display: flex;
+    flex-direction: column;
+    background-color: #242424;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.titre-competences {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carres {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alignement en haut pour les carrés */
+    flex-wrap: wrap;
+    gap: 50px; /* Augmenté l'espace entre les carrés */
+    max-width: 1200px;
+    margin: 20px auto; /* Ajout de marge pour séparer du titre */
+}
+
+.be{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carre {
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+    border: 2px solid #00ac7e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    animation: bougerCarre 10s ease infinite; /* Utilisation de l'animation sur les carrés */
+}
+
+.carre h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.carre p {
+    font-size: 16px;
+    color: #00ac7e;;
+}
+
+.contact {
+    border-top: 2px solid #00ac7e;
+    background-color: #1c1c1c;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+    width: 100%; /* Le fond prend toute la largeur */
+}
+
+.contact-contenu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titre-contact {
+    color: #00ac7e;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formulaire-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px; /* Ajout d'espace entre le titre et le formulaire */
+}
+
+/* Stylisation des champs de formulaire */
+.champ {
+    margin-bottom: 30px; /* Ajout d'espace entre les champs */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Animation au survol des champs */
+.champ input:hover,
+.champ textarea:hover {
+    border-color: #00ffbb;
+}
+
+/* Animation au focus des champs */
+.champ input:focus,
+.champ textarea:focus {
+    outline: none;
+    border-color: #00ffbb;
+    box-shadow: 0px 0px 5px rgba(0, 255, 187, 0.5);
+}
+
+/* Stylisation du bouton */
+button {
+    background-color: #00ffbb;
+    color: #242424;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Alignement du bouton à droite */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00ac7e;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 1000px;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #00ffbb;
+}
+
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.projet-bulle {
+    flex: 1 1 calc(50% - 20px);
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 350px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bulle {
+    width: 350px;
+    height: 150px;
+    border: 2px solid #00ac7e;
+    background-color: #242424;
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.bulle .nom-projet {
+    color: #00ac7e;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bulle:hover {
+    background-color: #00ac7e;
+}
+
+.nom-projet {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.details-projet {
+    display: none;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Animation d'apparition pour les détails du projet */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.details-projet.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.description-projet {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: #242424;
+    font-size: 13.7px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 300px;
+}
+
+.projet-bulle:hover .description-projet {
+    display: block;
+}

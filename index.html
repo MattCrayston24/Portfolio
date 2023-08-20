@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Matt Crayston</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="accueil" class="accueil">
+    <div class="presentation">
+      <div class="texte">
+        <h2>Portfolio</h2>
+        <h1>de Matt Crayston</h1>
+        <p class="intro">
+          Un <span class="metier">étudiant</span> passionné par <span class="passion">l'informatique</span>.
+        </p>
+        <a href="#portfolio" class="bouton-portfolio">Découvrir mon travail</a>
+      </div>
+      <img src="/img/matt.jpg" alt="Votre Image">
+    </div>
+  </section>
+
+  <section id="apropos">
+    <div class="ap">
+        <div class="txt">
+            <p id="texteAbrégé">Enchanté, je suis Matt Crayston, originaire de la magnifique ville d'Aix-en-Provence. J'amorce actuellement ma 19e année de vie tout en poursuivant un passionnant parcours académique au sein du Campus Ynov, où je suis inscrit en deuxième année de Bachelor en informatique (B2). Mon vif intérêt pour le monde de l'informatique m'a propulsé dans un voyage de découverte technologique où chaque ligne de code est une occasion de créer, d'innover et de façonner l'avenir numérique. </p>
+            <div id="texteComplet" style="display: none;">Enchanté, je suis Matt Crayston, originaire de la magnifique ville d'Aix-en-Provence. J'amorce actuellement ma 19e année de vie tout en poursuivant un passionnant parcours académique au sein du Campus Ynov, où je suis inscrit en deuxième année de Bachelor en informatique (B2). Mon vif intérêt pour le monde de l'informatique m'a propulsé dans un voyage de découverte technologique où chaque ligne de code est une occasion de créer, d'innover et de façonner l'avenir numérique.
+                
+                Au-delà des écrans et des lignes de code, je trouve un équilibre en cultivant ma passion pour la musculation. Sculpter mon corps est un défi stimulant qui, à bien des égards, reflète mon approche du développement informatique : une quête de perfectionnement constant et de dépassement de soi.
+                    
+                L'informatique n'est pas seulement un domaine d'études pour moi, c'est une fascination quotidienne qui m'inspire à repousser les limites de mes compétences techniques. Mon aspiration pour l'avenir est de m'immerger davantage dans le vaste univers de la cybersécurité. J'aspire à entreprendre un parcours en Master dans ce domaine, afin de contribuer à la préservation de la sphère numérique tout en continuant d'apprendre et de grandir en tant que professionnel de l'informatique.
+                
+                Chaque ligne de code que j'écris, chaque algorithme que je résous et chaque nouvelle technologie que j'explore est une étape vers la réalisation de mes aspirations et la construction d'un avenir numérique plus sûr et novateur. Mon voyage ne fait que commencer, mais je suis animé par une passion inextinguible pour l'informatique et une détermination inébranlable à atteindre de nouveaux sommets.</div>
+        </div>
+        <div class="boutons-conteneur">
+            <button id="voirPlus">Voir plus</button>
+            <button id="voirMoins" style="display: none;">Voir moins</button>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projets">
+        <a href="https://github.com/MattCrayston24/Challenge48h-site" class="projet-bulle" data-projet="projet1">
+            <div class="bulle">
+                <span class="nom-projet">48h</span>
+                <div class="description-projet">
+                    Le challenge 48h, est un challenge réalisé à Ynov, faisant participer des étudiants de différents niveaux,
+                    dans la réalisation d'un projet commun en 48h, qui doit être un chasse au trésor informatique, où personne ne doit réussir ou très peu à finir votre épreuve dans un temps imparti... 
+                </div>
+            </div>
+            <span class="nom-projet">Challenge 48H</span>
+        </a>
+        <a href="https://github.com/MattCrayston24/GroupieTracker_Crayston_Matt" class="projet-bulle" data-projet="projet2">
+            <div class="bulle">
+                <span class="nom-projet">GP</span>
+                <div class="description-projet">
+                    C'est un travail en équipe, en effet travailler en équipe c'est fusionner nos talents pour créer une synergie 
+                    puissante. Chacun apporte sa perspective unique, transformant les défis en 
+                    opportunités. La communication devient notre moteur, les compétences 
+                    individuelles des pièces d'un puzzle complexe... 
+                          </div>
+            </div>
+            <span class="nom-projet">Groupie Tracker</span>
+        </a>
+        <a href="https://github.com/Lucas8400/BURLE-CRAYSTON-shopping-app" class="projet-bulle" data-projet="projet3">
+            <div class="bulle">
+                <span class="nom-projet">SA</span>                
+                <div class="description-projet">
+                    Ce projet consiste a créer sa boutique en ligne, en effet par groupe de 
+                étudiant, il faut créer une boutique en ligne complète avec pleins de consignes,
+                de règles à suivre, pour se surpasser et rendre une boutique crédible... </div>
+
+            </div>
+            <span class="nom-projet">Shopping App</span>
+        </a>
+        <a href="https://github.com/MattCrayston24/Crayston_Burle_KOJOK-TARRAF_Forum" class="projet-bulle" data-projet="projet4">
+            <div class="bulle">
+                <span class="nom-projet">FO</span>
+                <div class="description-projet">
+                    Il faut créer un forum intéractif, par groupe de 2 à 3, dans lequel le thème 
+                    est libre, des consignes assez complètes permettant de se donner à 100% en mettant une deadline pour chaque évolutiuon du projet...
+                </div>
+            </div>
+            <span class="nom-projet">Forum</span>
+        </a>
+        <a href="https://github.com/TomL-y/LaboDev" class="projet-bulle" data-projet="projet5">
+            <div class="bulle">
+                <span class="nom-projet">LD</span>
+                <div class="description-projet">
+                    En année de B1 Informatique, j'ai pris le risque durant les Yboost de créer ma propre start-up 
+                    et de recruter des membres pour faire évoluer mon idée, il y a eu des problèmes, des difficultés (surtout de connaissances)
+                    mais à la fin nous sommes passer à l'oral avec quelque chose à dire...
+                </div>
+            </div>
+            <span class="nom-projet">Labodev</span>
+        </a>
+        <a href="https://github.com/Lucas8400/BURLE_CRAYSTON_PROJET_WEB" class="projet-bulle" data-projet="projet6">
+            <div class="bulle">
+                <span class="nom-projet">PW</span>
+                <div class="description-projet">
+                    Un autre projet Web, mais pour moi explorez l'univers des projets web, où créativité et code se marient pour former des expériences uniques. Chaque clic 
+                    ouvre une nouvelle porte vers l'innovation et l'esthétique numérique.
+                </div>
+            </div>
+            <span class="nom-projet">Projet Web</span>
+        </a>
+    </div>
+    <div class="bouton-voir-plus">
+        <a href="https://github.com/MattCrayston24/" class="bouton-portfolio">Voir plus</a>
+    </div>
+    <div class="details-projet" id="projet1">
+        <!-- Contenu du projet 1 -->
+    </div>
+    <div class="details-projet" id="projet2">
+        <!-- Contenu du projet 2 -->
+    </div>        <!-- Contenu du projet 1 -->
+    </div>
+    <div class="details-projet" id="projet2">
+        <!-- Contenu du projet 2 -->
+    </div>
+    <div class="details-projet" id="projet3">
+        <!-- Contenu du projet 3 -->
+    </div>
+    <div class="details-projet" id="projet4">
+        <!-- Contenu du projet 4 -->
+    </div>
+</section>
+
+<section id="competences" class="competences">
+    <h2 class="be">Compétences</h2>
+    <div class="carres">
+        <div class="carre">
+            <h3>Programmation</h3>
+            <p>Maîtrise des langages de programmation tels que GO et JavaScript.</p>
+        </div>
+        <div class="carre">
+            <h3>Développement Web</h3>
+            <p>Conception et développement de sites web responsives avec HTML, CSS et frameworks.</p>
+        </div>
+        <div class="carre">
+            <h3>Cybersécurité</h3>
+            <p>En cours d'apprentissage, en vu d'une spécialisation future.</p>
+        </div>
+        <div class="carre">
+            <h3>Base de données</h3>
+            <p>Gestion et conception de bases de données SQL et NoSQL.</p>
+        </div>
+        <div class="carre">
+            <h3>Recherches</h3>
+            <p>Être efficace durant des recherches sur un problème quelconque.</p>
+        </div>
+        <div class="carre">
+            <h3>Collaboration</h3>
+            <p>Capacité à travailler en équipe et à communiquer efficacement.</p>
+        </div>
+    </div>
+
+
+    <section id="contact" class="contact">
+        <div class="contact-contenu">
+            <h2 class="titre-contact">Contactez-moi</h2>
+            <div class="formulaire-contact">
+                <form>
+                    <div class="champ">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="champ">
+                        <label for="telephone">Téléphone :</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                    <div class="champ">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="champ">
+                        <label for="email">Adresse e-mail :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="champ">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+      <p>&copy; 2023 Crayston Matt. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
